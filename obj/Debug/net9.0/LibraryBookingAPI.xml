@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryBookingAPI</name>
+    </assembly>
+    <members>
+        <member name="M:LibraryBookingAPI.Controllers.BooksController.GetBooks">
+            <summary>
+            Retrieves a list of books.
+            </summary>
+            <response code="200">Returns the list of books</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.BooksController.GetBook(System.Int32)">
+            <summary>
+            Retrieves a book by its ID.
+            </summary>
+            <param name="id">The ID of the book.</param>
+            <response code="200">Returns the book</response>
+            <response code="404">If the book is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.BooksController.PostBook(Book)">
+            <summary>
+            Creates a new book.
+            </summary>
+            <param name="book">The book to create.</param>
+            <response code="201">Returns the newly created book</response>
+            <response code="400">If the book is null</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.BooksController.PutBook(System.Int32,Book)">
+            <summary>
+            Updates an existing book.
+            </summary>
+            <param name="id">The ID of the book.</param>
+            <param name="book">The updated book object.</param>
+            <response code="204">If the update is successful</response>
+            <response code="400">If the book ID does not match</response>
+            <response code="404">If the book is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.BooksController.DeleteBook(System.Int32)">
+            <summary>
+            Deletes a book.
+            </summary>
+            <param name="id">The ID of the book to delete.</param>
+            <response code="204">If the deletion is successful</response>
+            <response code="404">If the book is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.BooksController.SearchBooks(System.String,System.String,System.Nullable{BookStatus})">
+            <summary>
+            Searches for books by title, author, and/or status.
+            </summary>
+            <param name="title">The title of the book(s) to search for.</param>
+            <param name="author">The author of the book(s) to search for.</param>
+            <param name="status">The status of the book(s) to search for.</param>
+            <response code="200">Returns the list of books matching the search criteria</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.CustomersController.GetCustomers">
+            <summary>
+            Retrieves a list of customers.
+            </summary>
+            <response code="200">Returns the list of customers</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.CustomersController.GetCustomer(System.Int32)">
+            <summary>
+            Retrieves a customer by their ID.
+            </summary>
+            <param name="id">The ID of the customer.</param>
+            <response code="200">Returns the customer</response>
+            <response code="404">If the customer is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.CustomersController.PostCustomer(Customer)">
+            <summary>
+            Creates a new customer.
+            </summary>
+            <param name="customer">The customer to create.</param>
+            <response code="201">Returns the newly created customer</response>
+            <response code="400">If the customer is null</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.CustomersController.PutCustomer(System.Int32,Customer)">
+            <summary>
+            Updates an existing customer.
+            </summary>
+            <param name="id">The ID of the customer.</param>
+            <param name="customer">The updated customer object.</param>
+            <response code="204">If the update is successful</response>
+            <response code="400">If the customer ID does not match</response>
+            <response code="404">If the customer is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.CustomersController.DeleteCustomer(System.Int32)">
+            <summary>
+            Deletes a customer.
+            </summary>
+            <param name="id">The ID of the customer to delete.</param>
+            <response code="204">If the deletion is successful</response>
+            <response code="404">If the customer is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.ReservationsController.AddReservation(System.Int32,System.Int32)">
+            <summary>
+            Adds a new reservation.
+            </summary>
+            <param name="customerId">The ID of the customer.</param>
+            <param name="bookId">The ID of the book.</param>
+            <response code="201">Returns the newly created reservation</response>
+            <response code="400">If the book is not available or the customer is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.ReservationsController.GetReservation(System.Int32)">
+            <summary>
+            Retrieves a reservation by its ID.
+            </summary>
+            <param name="id">The ID of the reservation.</param>
+            <response code="200">Returns the reservation</response>
+            <response code="404">If the reservation is not found</response>
+        </member>
+        <member name="M:LibraryBookingAPI.Controllers.ReservationsController.DeleteReservation(System.Int32)">
+            <summary>
+            Deletes a reservation.
+            </summary>
+            <param name="id">The ID of the reservation to delete.</param>
+            <response code="204">If the deletion is successful</response>
+            <response code="404">If the reservation is not found</response>
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.ExtendedLibrarySchema">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.ExtendedLibrarySchema.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.ExtendedLibrarySchema.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.ExtendedLibrarySchema.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.UpdateNulls">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.UpdateNulls.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.UpdateNulls.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.UpdateNulls.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.UpdateFinal">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.UpdateFinal.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.UpdateFinal.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.UpdateFinal.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.up1319">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1319.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1319.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1319.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.up1733">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1733.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1733.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1733.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.up1819">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1819.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1819.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1819.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.up1912">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1912.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1912.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1912.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.up1917">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1917.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1917.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.up1917.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.last_update">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.last_update.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.last_update.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.last_update.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:LibraryBookingAPI.Migrations.last">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.last.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.last.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryBookingAPI.Migrations.last.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "NRp03fqXtAfUhPVos9PP6gdjsaCMv+c87Bw8htfWY7Q=",
+  "Source": "LibraryBookingAPI",
+  "BasePath": "_content/LibraryBookingAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
